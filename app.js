@@ -47,50 +47,95 @@ const data = [
 // Instructions
 // Take the data above and display it as tiles on the page
 
-function createTd(text) {
-    const td = document.createElement('td')
-    td.textContent = text
-    return td
+// function createTd(text) {
+//     const td = document.createElement('td')
+//     td.textContent = text
+//     return td
+// }
+
+// function createTr() {
+//   const tr = document.createElement('tr')
+//     return tr
+// } 
+
+// function createRow(info) {
+//   const tr = createTr()
+//   const topics = createTd(info.topic)
+//   const titles = createTd(info.title)
+//   const prices = createTd(info.price)
+//   // const color = createTd(data.color)
+//   tr.appendChild(topics)
+//   tr.appendChild(titles)
+//   tr.appendChild(prices)
+//   // tr.appendChild(color)
+//   return tr
+// }
+
+// function createTable(data) {
+//   const table = document.createElement('table')
+
+//   data.forEach(function(info) {
+//     const tr = createRow(info)
+//     table.appendChild(tr)
+//   })
+//   return table
+// }
+
+// const generatedTable = createTable(data)
+// document.body.appendChild(generatedTable)
+
+
+function createTopicDiv(text) {
+  const topicDiv = document.createElement('div')
+  topicDiv.className = "topic"
+  topicDiv.textContent = text
+return topicDiv
 }
 
-function createTr() {
-  const tr = document.createElement('tr')
-    return tr
+function createTitleDiv(text) {
+  const titleDiv = document.createElement('div')
+  titleDiv.className = "title"
+  titleDiv.textContent = text
+return titleDiv
+}
+
+function createButtonDiv(text) {
+  const buttonDiv = document.createElement('div')
+  buttonDiv.className = "buy-button"
+  buttonDiv.textContent = text
+return buttonDiv
+}
+
+function createCardDiv() {
+  const card = document.createElement('div')
+  card.className = "card"
+return card
 } 
 
-function createRow(data) {
-  const tr = createTr()
-  const topic = createTd(data.topic)
-  const title = createTd(data.title)
-  const price = createTd(data.price)
-//   const color = createTd(data.color)
-  tr.appendChild(topic)
-  tr.appendChild(title)
-  tr.appendChild(price)
-//   tr.appendChild(color)
-  return tr
+function createRow(info) {
+  const card = createCardDiv()
+  const topics = createTopicDiv(info.topic)
+  const titles = createTitleDiv(info.title)
+  const prices = createButtonDiv(info.price)
+  card.style.backgroundColor = info.color
+  // const color = createTd(data.color)
+  card.appendChild(topics)
+  card.appendChild(titles)
+  card.appendChild(prices)
+  // tr.appendChild(color)
+return card
 }
 
-function createTable(arrayOfData) {
-  const table = document.createElement('table')
+function createTable(data) {
+  const table = document.createElement('div')
+  data.forEach(function(info) {
+  const card = createRow(info)
 
-  arrayOfData.forEach(function(rowData) {
-    const row = createRow(rowData)
-    table.appendChild(row)
+  const addressCard = document.querySelector("#content")
+
+  addressCard.appendChild(card)
   })
-
-  return table
 }
 
 const generatedTable = createTable(data)
 document.body.appendChild(generatedTable)
-
-
-
-
-
-
-
-
-
-

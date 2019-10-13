@@ -33,7 +33,7 @@ nav .container ul li {
 }
 
 .logo {
-    background: url('./img/logo.svg');
+    background: url('logo.svg');
     background-size: 24px;
     background-position: center;
     background-repeat: no-repeat;
@@ -70,6 +70,20 @@ nav .container ul li {
         11px 11px 6px rgba(0, 0, 0, 0.05);
 }
 
+.card .topic {
+    color: white;
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.card .title {
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+}
+
 .card .buy-button {
     position: absolute;
     bottom: 20px;
@@ -80,17 +94,4 @@ nav .container ul li {
     padding: 8px 20px;
     font-size: 12px;
     font-weight: 700;
-}
-
-.card .topic {
-    color: white;
-    font-weight: 300;
-    font-size: 12px;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-.card .title {
-    color: white;
-    font-weight: 700;
-    font-size: 22px;
 }
