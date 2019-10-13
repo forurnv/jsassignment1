@@ -47,6 +47,50 @@ const data = [
 // Instructions
 // Take the data above and display it as tiles on the page
 
+function createTd(text) {
+    const td = document.createElement('td')
+    td.textContent = text
+    return td
+}
+
+function createTr() {
+  const tr = document.createElement('tr')
+    return tr
+} 
+
+function createRow(data) {
+  const tr = createTr()
+  const topic = createTd(data.topic)
+  const title = createTd(data.title)
+  const price = createTd(data.price)
+//   const color = createTd(data.color)
+  tr.appendChild(topic)
+  tr.appendChild(title)
+  tr.appendChild(price)
+//   tr.appendChild(color)
+  return tr
+}
+
+function createTable(arrayOfData) {
+  const table = document.createElement('table')
+
+  arrayOfData.forEach(function(rowData) {
+    const row = createRow(rowData)
+    table.appendChild(row)
+  })
+
+  return table
+}
+
+const generatedTable = createTable(data)
+document.body.appendChild(generatedTable)
+
+
+
+
+
+
+
 
 
 
