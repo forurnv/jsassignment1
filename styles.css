@@ -1,6 +1,10 @@
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 GENERAL 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+body {
+    background-color: rgb(243, 70, 214);
+}
+
 h1 {
     font-size: 36px;
     font-weight: 900;
@@ -21,6 +25,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: rgb(81, 138, 245);
 }
 
 nav .container ul {
@@ -66,8 +71,8 @@ nav .container ul li {
     margin: 10px;
     padding: 20px;
     position: relative;
-    box-shadow: 2px 8px 9px 0px rgba(0, 0, 0, 0.14),
-        11px 11px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 3px 8px 9px 0px rgba(0, 0, 0, 0.14),
+        11px 11px 6px rgba(0, 0, 0, .75);
 }
 
 .card .topic {
